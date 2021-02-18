@@ -6,13 +6,26 @@
     <%= @cocktail.name %>
   </p>
 
-  <h4>Doses</h4>
-  <ul>
-    <% @doses.each do |dose|  %>
-      <li><%= dose.description %></li>
-    <% end %>
-  </ul>
+  <table>
+    <thead>
+      <tr>
+        <th>Dose</th>
+        <th>Ingredient</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @doses.each do |dose| %>
+        <tr>
+          <td><%= dose.description %></td>
+          <td><%= dose.ingredient.name%></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
   <%= link_to 'Add Doses', new_cocktail_dose_path(@cocktail) %> 
   <%= link_to 'Back', cocktails_path %> 
 </div>
+
