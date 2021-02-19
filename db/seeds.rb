@@ -21,3 +21,4 @@ ingredients.each do |ingredient|
   new_ingredient = Ingredient.create(name: drink_ingredient)
   p "Created new ingredient #{new_ingredient}"
 end
+
