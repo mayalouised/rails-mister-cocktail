@@ -3,16 +3,44 @@
 body {
   background: url(http://3.bp.blogspot.com/-Ew08c1X6t4w/Ti8dIgRf6mI/AAAAAAAANOU/noUA1PGvyOo/s1600/Purple%2Bsunset%2Bwallpaper-3.jpg);
   background-size: cover;
-
 }
+
 .header {
   text-align: center;
 }
 
-.card {
+.c-card {
   height: 350px;
+  width: 380px;
   background-color: #D090FF;
   color: #eeedeb;
-  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  display: block;
+  justify-content: space-around;
 }
 
+.card-img {
+  padding-top: 10px;
+  padding-left: 15px;
+  align-items: center;
+}
+
+#card-name h2 {
+  font-family: 'Bungee Shade', cursive;
+  text-align: center;
+}
+
+.link-new {
+  text-align: center;
+}
+
+.link-new a {
+  color: #f6a44e; 
+  font-family: 'Poller One', cursive;
+  top: 100px;
+}
+
+a:hover {
+  text-decoration: none;
+  -webkit-box-shadow: 0px 0px 19px 0px rgba(48,217,149,1);
+}

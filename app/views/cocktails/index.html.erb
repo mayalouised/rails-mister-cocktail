@@ -1,21 +1,29 @@
 <body>
-  <div class="mt-5 header">
-    <img src="assets/logo/cocktails_logo.png" alt="cocktails" >
-  </div>
-  <div class=" mt-4 container">
-    <% @cocktails.each do |cocktail| %>
-      <div class="col-4 card">
-        <div class="card-img">
-          <% if cocktail.photo.attached? %>
-          <%= cl_image_tag cocktail.photo.key, height: 250, width: 350, crop: :fill %>
-          <% end %>
-        </div>
-        <h2><%= cocktail.name %> <%= link_to 'Show', cocktail %></h2>
-      </div>
-    <% end %>
-  </div>
+  <div class="container">
+    <div class="mt-5 header">
+      <img src="assets/logo/cocktails_logo.png" alt="cocktails" >
+    </div>
   
-  <%= link_to 'New Cocktail', new_cocktail_path %>
+    <div class=" col-4 mt-4">
+      <% @cocktails.each do |cocktail| %>
+        <div class="c-card">
+          <div class="card-img">
+            <% if cocktail.photo.attached? %>
+            <%= cl_image_tag cocktail.photo.key, height: 250, width: 350, crop: :fill %>
+            <% end %>
+          </div>
+          <div id="card-name">
+            <h2><%= cocktail.name %></h2>
+            <h3> <%= link_to 'details', cocktail %></h3>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  
+    <div class="link-new">
+      <h1> <%= link_to 'New Cocktail', new_cocktail_path %> </h1>
+    </div>
+  </div>
 <br>
 <br>  
 <br>
