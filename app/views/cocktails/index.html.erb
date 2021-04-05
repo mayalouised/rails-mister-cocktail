@@ -7,6 +7,7 @@
     <div class=" col-4 mt-4">
       <% @cocktails.each do |cocktail| %>
         <div class="c-card">
+          <%= link_to cocktail_path(cocktail) do %>
           <div class="card-img">
             <% if cocktail.photo.attached? %>
             <%= cl_image_tag cocktail.photo.key, height: 250, width: 350, crop: :fill %>
@@ -14,13 +15,13 @@
           </div>
           <div id="card-name">
             <h2><%= cocktail.name %></h2>
-            <h3> <%= link_to 'details', cocktail %></h3>
           </div>
+          <% end %>
         </div>
       <% end %>
     </div>
   
-    <div class="link-new">
+    <div class="btn btn-primary" id="link-new">
       <h1> <%= link_to 'New Cocktail', new_cocktail_path %> </h1>
     </div>
   </div>

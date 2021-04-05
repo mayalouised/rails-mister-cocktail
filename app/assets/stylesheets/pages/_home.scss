@@ -30,17 +30,31 @@ body {
   text-align: center;
 }
 
-.link-new {
+.btn {
+  background-color: transparent;
+  border: 2px, solid, #f6a44e;
+  display: block;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 2px, solid, #f6a44e;
+}
+
+#link-new {
   text-align: center;
 }
 
-.link-new a {
+#link-new a {
   color: #f6a44e; 
   font-family: 'Poller One', cursive;
   top: 100px;
+  border: 2px, solid, #f6a44e;
 }
 
 a:hover {
   text-decoration: none;
-  -webkit-box-shadow: 0px 0px 19px 0px rgba(48,217,149,1);
+  // -webkit-box-shadow: 0px 0px 19px 0px rgba(48,217,149,1);
 }
+
+
