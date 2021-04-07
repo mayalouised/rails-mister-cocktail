@@ -9,6 +9,13 @@ body {
   text-align: center;
 }
 
+.cards {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+}
+
 .c-card {
   height: 350px;
   width: 380px;
@@ -17,17 +24,30 @@ body {
   position: relative;
   display: block;
   justify-content: space-around;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 7px;
+  margin: 10px 20px 10px 0;
 }
 
+#card-link {
+  color: #eeedeb;
+}
+
+
 .card-img {
-  padding-top: 10px;
+  padding-top: 15px;
   padding-left: 15px;
+  padding-right: 15px;
   align-items: center;
 }
+
+
 
 #card-name h2 {
   font-family: 'Bungee Shade', cursive;
   text-align: center;
+  color: #eeedeb;
+  margin-top: 15px;
 }
 
 .btn {
@@ -43,6 +63,7 @@ body {
 
 #link-new {
   text-align: center;
+  padding-top: 2em;
 }
 
 #link-new a {
@@ -50,6 +71,7 @@ body {
   font-family: 'Poller One', cursive;
   top: 100px;
   border: 2px, solid, #f6a44e;
+  width: 100px;
 }
 
 a:hover {

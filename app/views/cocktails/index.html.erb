@@ -3,12 +3,11 @@
     <div class="mt-5 header">
       <img src="assets/logo/cocktails_logo.png" alt="cocktails" >
     </div>
-  
-    <div class=" col-4 mt-4">
+    <div class="cards mt-4">
       <% @cocktails.each do |cocktail| %>
-        <div class="c-card">
+        <div class="c-card" id="card-link">
           <%= link_to cocktail_path(cocktail) do %>
-          <div class="card-img">
+          <div class="card-img" id="star-five">
             <% if cocktail.photo.attached? %>
             <%= cl_image_tag cocktail.photo.key, height: 250, width: 350, crop: :fill %>
             <% end %>
@@ -21,7 +20,7 @@
       <% end %>
     </div>
   
-    <div class="btn btn-primary" id="link-new">
+    <div id="link-new">
       <h1> <%= link_to 'New Cocktail', new_cocktail_path %> </h1>
     </div>
   </div>
