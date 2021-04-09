@@ -3,6 +3,7 @@
 body {
   background: url(http://3.bp.blogspot.com/-Ew08c1X6t4w/Ti8dIgRf6mI/AAAAAAAANOU/noUA1PGvyOo/s1600/Purple%2Bsunset%2Bwallpaper-3.jpg);
   background-size: cover;
+  background-position: center center;
 }
 
 .header {
@@ -14,6 +15,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
+  margin-bottom: 3em;
 }
 
 .c-card {
