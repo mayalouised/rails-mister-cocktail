@@ -1,9 +1,10 @@
-<%= simple_form_for(@cocktail) do |f| %>
+<div class="mt-5 container">
+  <%= simple_form_for(@cocktail) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :name %>
+    <h2><%= f.input :name %></h2>
   </div>
 
   <%= f.input :photo, as: :file %>
@@ -13,4 +14,8 @@
   </div>
 <% end %>
 
-<%= link_to 'Back', cocktails_path %>
+<div id="link-new">
+  <h2><%= link_to 'Back', cocktails_path %></h2>
+</div>
+
+</div>
