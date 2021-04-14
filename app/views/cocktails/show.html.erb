@@ -1,34 +1,43 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @cocktail.name %>
-    <% if @cocktail.photo.attached? %>
-    <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
-  </p>
+  <div class="show">
+    <div class="show-desc">
+      <h2>
+        <%= @cocktail.name %>
+      </h2>
+      <table class="table" id="c-table">
+        <thead>
+          <tr>
+            <th>Dose</th>
+            <th>Ingredient</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <% @doses.each do |dose| %>
+            <tr>
+              <td><%= dose.description %></td>
+              <td><%= dose.ingredient.name%></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Dose</th>
-        <th>Ingredient</th>
-        <th colspan="2"></th>
-      </tr>
-    </thead>
+      <div id="link-new">
+        <h2><%= link_to 'Add an Ingredient', new_cocktail_dose_path(@cocktail) %> </h2>
+        <br>
+        <h4><%= link_to 'Back', cocktails_path %> </h4>
+      </div>
   
-    <tbody>
-      <% @doses.each do |dose| %>
-        <tr>
-          <td><%= dose.description %></td>
-          <td><%= dose.ingredient.name%></td>
-        </tr>
+    </div>
+    <div class="mt-5 ml-5 show-img">
+      <% if @cocktail.photo.attached? %>
+      <%= cl_image_tag @cocktail.photo.key, height: 400, width: 500, crop: :fill %>
       <% end %>
-    </tbody>
-  </table>
+    </div>
+      
+  </div>
 
-  <%= link_to 'Add Doses', new_cocktail_dose_path(@cocktail) %> 
-  <%= link_to 'Back', cocktails_path %> 
 </div>
 

@@ -1,10 +1,5 @@
 // Specific CSS for your home-page
 
-// body {
-//   background: url('../../../images/sunset.jpg');
-//   background-size: cover;
-//   background-position: center center;
-// }
 
 .header {
   text-align: center;
@@ -47,13 +42,45 @@ img {
 }
 
 
-
 #card-name h2 {
   font-family: 'Bungee Shade', cursive;
   text-align: center;
   color: #eeedeb;
   margin-top: 15px;
   font-size: 26px;
+}
+
+#c-table {
+  background-color: #D090FF;
+  text-align: center;
+  width: 250px;
+  border-radius: 7px;
+  border-top: none;
+  margin-top: 2em;
+  margin-left: 3.5em;
+  font-family: 'Poller One', cursive;
+}
+
+#c-table th {
+  border-top: none;
+  color: #653985;
+}
+
+.show {
+  margin-top: 6em;
+  display: flex;
+  justify-content: center;
+}
+
+.show-desc {
+  margin-right: 3em;
+  text-align: center;
+  align-items: center;
+}
+
+.show h2 {
+  font-family: 'Bungee Shade', cursive;
+  color: #eeedeb;
 }
 
 .btn {
