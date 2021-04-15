@@ -121,6 +121,8 @@ a:hover {
 
 .form-actions {
   text-align: center;
+  font-family: 'Bungee Shade', cursive;
+  color: #eeedeb;
 }
 
 
@@ -137,4 +139,15 @@ input.btn:hover {
   color: #f6a44e; 
 }
 
+label.file.optional {
+  text-align: center;
+  font-family: 'Bungee Shade', cursive;
+  color: #eeedeb;
+  font-size: 20px;
+}
 
+input#cocktail_photo.form-control-file.file.optional {
+  font-family: 'Bungee Shade', cursive;
+  color: #eeedeb;
+  font-size: 20px;
+}
