@@ -1,11 +1,13 @@
 <div class="mt-5 container">
   <%= simple_form_for [@cocktail,@dose] do |f| %>
   <div class="form-inputs">
-    <h2><%= f.input :description %></h2>
     <h2><%= f.association :ingredient %></h2>
+    <h2><%= f.input :description, label: 'Amount' %></h2>
   </div>
-  <%= f.button :submit %>
-<% end %>
+  <div id="create-dose">
+    <h2><%= f.button :submit %></h2>
+    <% end %>
+  </div>
 
   <div id="link-new">
     <h2><%= link_to 'Back', @cocktail %></h2>
